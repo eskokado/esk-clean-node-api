@@ -52,5 +52,8 @@
     "mongodb": "^3.6.3",
     "mongodb-memory-server": "^6.5.1",
     "validator": "^13.5.2"
+  },
+  "engines": {
+    "node": "12.x"
   }
 }
