@@ -10,13 +10,10 @@ services:
       - "27017:27017"
   api:
     container_name: api-container
-    # image: node:12
-    build: .
-    image: esk-clean-node-api
+    image: node:12
     restart: always
-    # working_dir: /usr/src/esk-clean-node-api
-    # command: bash -c "npm install --only=prod && npm run debug"
-    command: npm run debug
+    working_dir: /usr/src/esk-clean-node-api
+    command: bash -c "npm install --only=prod && npm run debug"
     # environment:
       # - MONGO_URL=mongodb://mongo:27017/esk-clean-node-api
     volumes:
