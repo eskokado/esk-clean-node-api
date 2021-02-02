@@ -6,7 +6,7 @@
       "request": "attach",
       "name": "Docker: Attach to Node",
       "remoteRoot": "/usr/src/esk-clean-node-api",
-      "port": 9229,
+      "port": 9222,
       "restart": true
     }
   ]
