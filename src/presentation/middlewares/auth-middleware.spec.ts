@@ -1,5 +1,5 @@
 import { HttpRequest } from './../protocols/http'
-import { AuthMiddleware } from './auth-middeware'
+import { AuthMiddleware } from './auth-middleware'
 import { forbidden, ok, serverError } from '../helpers/http/http-helper'
 import { AccessDeniedError } from '../errors'
 import { LoadAccountByToken } from '../../domain/usecases/load-account-by-token'
