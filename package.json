@@ -1,7 +1,10 @@
 {
   "name": "esk-clean-node-api",
   "version": "2.2.0",
-  "description": "",
+  "description": "NodeJs Rest API using TDD, Clean Architecture and Typescript",
+  "author": "Edson Shideki Kokado",
+  "license": "GPL-3.0-or-later",
+  "repository": "github:eskokado/esk-clean-ts-api",
   "main": "index.js",
   "scripts": {
     "start": "node dist/main/server.js",
@@ -19,8 +22,6 @@
     "test:coveralls": "npm run test:ci && coveralls < coverage/lcov.info"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@shelf/jest-mongodb": "^1.2.3",
     "@types/bcrypt": "^3.0.0",
