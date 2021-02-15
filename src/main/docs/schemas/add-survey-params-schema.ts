@@ -1,9 +1,6 @@
-export const surveySchema = {
+export const addSurveyParamsSchema = {
   type: 'object',
   properties: {
-    id: {
-      type: 'string'
-    },
     question: {
       type: 'string'
     },
@@ -12,10 +9,7 @@ export const surveySchema = {
       items: {
         $ref: '#/schemas/surveyAnswer'
       }
-    },
-    date: {
-      type: 'string'
     }
   },
-  required: ['id', 'question', 'answers', 'date']
+  required: ['question', 'answers']
 }
