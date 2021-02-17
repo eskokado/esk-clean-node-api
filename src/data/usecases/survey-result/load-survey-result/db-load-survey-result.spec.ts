@@ -1,5 +1,4 @@
-import { LoadSurveyResult } from '@/domain/usecases/survey-result/load-survey-result'
-import { LoadSurveyResultRepository } from '@/data/protocols/db/survey-result/load-survey-result-repository'
+import { LoadSurveyResult, LoadSurveyResultRepository } from './db-load-survey-result-protocols'
 import { DbLoadSurveyResult } from './db-load-survey-result'
 import { mockLoadSurveyResultRepository } from '@/data/test'
 
