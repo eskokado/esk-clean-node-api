@@ -2,6 +2,7 @@ import { LoadSurveyResult, LoadSurveyResultRepository } from './db-load-survey-r
 import { DbLoadSurveyResult } from './db-load-survey-result'
 import { mockLoadSurveyResultRepository } from '@/data/test'
 import { mockSurveyResultModel, throwError } from '@/domain/test'
+import MockDate from 'mockdate'
 
 type SutTypes = {
   sut: LoadSurveyResult
@@ -18,6 +19,14 @@ const makeSut = (): SutTypes => {
 }
 
 describe('DbLoadSurveyResult UseCase', () => {
+  beforeAll(() => {
+    MockDate.set(new Date())
+  })
+
+  afterAll(() => {
+    MockDate.reset()
+  })
+
   test('Should call LoadSurveyResultRepository', async () => {
     const { sut, loadSurveyResultRepositoryStub } = makeSut()
     const loadBySurveyIdSpy = jest.spyOn(loadSurveyResultRepositoryStub, 'loadBySurveyId')
