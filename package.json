@@ -15,7 +15,7 @@
     "up": "npm run build && docker-compose up -d",
     "down": "docker-compose down",
     "dev": "sucrase-node src/main/server.ts",
-    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
+    "test": "jest --passWithNoTests --silent --noStackTrace --runInBand --no-cache",
     "test:verboso": "jest --passWithNoTests",
     "test:unit": "npm test -- --watch -c jest-unit-config.js",
     "test:integration": "npm test -- --watch -c jest-integration-config.js",
