@@ -12,6 +12,6 @@
       "@/*": ["*"]
     }
   },
-  "include": ["src", "tests/data/usecases/db-add-account.spec.ts", "tests/data/usecases/db-authentication.spec.ts", "tests/data/usecases/db-load-account-by-token.spec.ts", "tests/data/usecases/db-add-survey.spec.ts", "tests/data/usecases/db-load-survey-by-id.spec.ts", "tests/data/usecases/db-load-surveys.spec.ts", "tests/data/usecases/db-load-survey-result.spec.ts", "tests/data/usecases/db-save-survey-result.spec.ts", "tests/data/mocks/index.ts", "tests"],
+  "include": ["src", "tests"],
   "exclude": []
 }
