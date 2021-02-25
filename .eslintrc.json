@@ -12,6 +12,8 @@
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-redeclare": "off",
     "lines-between-class-members": "off",
-    "@typescript-eslint/lines-between-class-members": "off"
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/no-namespace": "off",
+    "import/export": "off"
   }  
 }
