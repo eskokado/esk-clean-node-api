@@ -1,4 +1,4 @@
-﻿import { LoadSurveyResultController } from '@/presentation/controllers'
+import { LoadSurveyResultController } from '@/presentation/controllers'
 import { forbidden, serverError, ok } from '@/presentation/helpers'
 import { InvalidParamError } from '@/presentation/errors'
 import { LoadSurveyByIdSpy, LoadSurveyResultSpy } from '@/tests/presentation/mocks'

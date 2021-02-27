@@ -1,1 +1,1 @@
-﻿export * from './auth-middleware-factory'
+export * from './auth-middleware-factory'

@@ -1,1 +1,1 @@
-﻿export * from './log-controller-decorator-factory'
+export * from './log-controller-decorator-factory'
