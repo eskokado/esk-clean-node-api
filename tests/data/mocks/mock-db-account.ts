@@ -1,29 +1,37 @@
-import { AccountModel } from '@/domain/models'
-import { mockAccountModel } from '@/tests/domain/mocks'
 import { AddAccountRepository, LoadAccountByTokenRepository, LoadAccountByEmailRepository, UpdateAccessTokenRepository } from '@/data/protocols/db'
+import faker from 'faker'
 
 export class AddAccountRepositorySpy implements AddAccountRepository {
-  accountModel = mockAccountModel()
+  result = true
   addAccountParams: AddAccountRepository.Params
 
-  async add (data: AddAccountRepository.Params): Promise<AccountModel> {
+  async add (data: AddAccountRepository.Params): Promise<AddAccountRepository.Result> {
     this.addAccountParams = data
-    return Promise.resolve(this.accountModel)
+    return this.result
   }
 }
 
 export class LoadAccountByEmailRepositorySpy implements LoadAccountByEmailRepository {
-  accountModel = mockAccountModel()
+  result = {
+    id: faker.random.uuid(),
+    name: faker.name.findName(),
+    password: faker.internet.password()
+  }
   email: string
 
-  async loadByEmail (email: string): Promise<AccountModel> {
+  async loadByEmail (email: string): Promise<LoadAccountByEmailRepository.Result> {
     this.email = email
-    return Promise.resolve(this.accountModel)
+    return this.result
   }
 }
 
 export class LoadAccountByTokenRepositorySpy implements LoadAccountByTokenRepository {
-  accountModel = mockAccountModel()
+  accountModel = {
+    id: faker.random.uuid(),
+    name: faker.name.findName(),
+    email: faker.internet.email(),
+    password: faker.internet.password()
+  }
   token: string
   role: string
 
